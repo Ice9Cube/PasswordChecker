@@ -12,15 +12,12 @@ private:
         int score = 0;
         for (int i = 0; i < password.length(); i++){
             if (isupper(password[i])){
-                cout << "Upper: "<< password[i]<<"\n";
                 score++;
             }
             else if (isascii(password[i]) != islower(password[i])){
-                cout << "Symbol: "<< password[i]<<"\n";
                 score++;
             }
             else if (isdigit(password[i])){
-                cout << "Digit: "<< password[i]<<"\n";
                 score++;
             }
             else {
@@ -47,15 +44,11 @@ public:
         else {
             int score = Checking(password);
             if (score < averange_score){
-                cout << "Your password: "<< password<<"\n";
-                cout << "Your password Score: "<< score<<"\n";
-                cout << "Accepted Password score "<< averange_score<<"\n";
                 cout << "Too simple password. Please try again!\n";
             }
             else {
                 cout << "Your password: "<< password<<"\n";
-                cout << "Accepted Password score "<< averange_score<<"\n";
-                cout << "Your password Score: "<< score<<"\n";
+                cout << "Your password is accepted\n";
             }
         }
     }
